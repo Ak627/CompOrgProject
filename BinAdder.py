@@ -3,16 +3,17 @@ Bin1 = input("Give me 1 binary number: ")
 Bin2 = input("Give me a binary number you want to add to the first: ")
 b1 = []
 b2 = []
-#uploading input into lists, converting to strings
+#uploading input into lists element by element
 for i in Bin1:
     b1.append(i)
 for i in Bin2:
     b2.append(i)
+
 #Reverses the lists so we can read binary from left to right
 b1.reverse()
 b2.reverse()
 #set up variables
-sclr = 1
+sclr = 1 #sclr is the value of each binary slot, starting at 1
 Dec1 = 0
 Dec2 = 0
 #read through the list and check for a 1, if slot contains 1 then you will add the scalar to the Decimal value
@@ -20,7 +21,7 @@ Dec2 = 0
 for j in range(len(b1)):
     if b1[j] == "1":
         Dec1 = Dec1 + sclr
-    sclr = sclr * 2
+    sclr = sclr * 2#multiplies binary slot by 2
     if b1[j] != "1" and b1[j] != "0":#check if the binary number contains anything other than 1 or 0
         print("Not a binary number, cannot continue!")
         exit()#if contains something other than 1 or 0 end the code
@@ -38,7 +39,7 @@ for j in range(len(b2)):
 
 Dec3 = Dec1 + Dec2#add the two original decimal values into a 3rd value
 sclr =1
-slot = 0
+slot = 0#a variable that takes care of how many slots needed in a list to make the binary value of Dec3
 while(sclr <= Dec3):
     sclr = sclr*2
     slot = slot +1
