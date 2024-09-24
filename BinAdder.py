@@ -60,7 +60,7 @@ b1.reverse()
 b2.reverse()
 print()
 Bin3 = ''#changes list into a string that can be printed out nicely
-for x in b3:
-    Bin3 += ''+x
+for x in b3:#runs a loop through each element of b3 list
+    Bin3 += ''+x#adds each element of b3 to Bin3 seperated by ''
 
 print(Bin1, "+", Bin2, "=", Bin3)
