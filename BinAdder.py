@@ -36,8 +36,6 @@ for j in range(len(b2)):
         print("Not a binary number, cannot continue!")
         exit()
 
-print(Dec1)
-print(Dec2)
 Dec3 = Dec1 + Dec2#add the two original decimal values into a 3rd value
 sclr =1
 slot = 0
@@ -46,14 +44,9 @@ while(sclr <= Dec3):
     slot = slot +1
     
 sclr = sclr/2
-print(Dec3)
-
-print(sclr)
 
 b3 = [None] * slot#creates a list that is the lenght of the slots we need, and contains arbitrary values(None)
-print()
 for i in range(slot):
-    print(Dec3, sclr)
     if  (Dec3 // sclr)%2 == 0:
         b3[i] = '0'
         Dec3 = Dec3-sclr
@@ -65,4 +58,8 @@ for i in range(slot):
 b1.reverse()
 b2.reverse()
 print()
-print(b1, "+", b2, "=", b3)
+Bin3 = ''#changes list into a string that can be printed out nicely
+for x in b3:
+    Bin3 += ''+x
+
+print(Bin1, "+", Bin2, "=", Bin3)
