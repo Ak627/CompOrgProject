@@ -1,3 +1,14 @@
+def convert(l,s):#Function to convert binary numbers to decimal
+    d = 0
+    for j in range(len(l)):
+        if l[j] == "1":
+            d = d + s
+        s = s * 2#multiplies binary slot by 2
+        if l[j] != "1" and l[j] != "0":#check if the binary number contains anything other than 1 or 0
+            print("Not a binary number, cannot continue!")
+            exit()#if contains something other than 1 or 0 end the code
+    return d
+
 #getting input
 Bin1 = input("Give me 1 binary number: ")
 Bin2 = input("Give me a binary number you want to add to the first: ")
@@ -14,31 +25,12 @@ b1.reverse()
 b2.reverse()
 #set up variables
 sclr = 1 #sclr is the value of each binary slot, starting at 1
-Dec1 = 0
-Dec2 = 0
-#read through the list and check for a 1, if slot contains 1 then you will add the scalar to the Decimal value
-#multiple the scalar by 2
-for j in range(len(b1)):
-    if b1[j] == "1":
-        Dec1 = Dec1 + sclr
-    sclr = sclr * 2#multiplies binary slot by 2
-    if b1[j] != "1" and b1[j] != "0":#check if the binary number contains anything other than 1 or 0
-        print("Not a binary number, cannot continue!")
-        exit()#if contains something other than 1 or 0 end the code
-#reset the scalar
-sclr = 1
 
 
-for j in range(len(b2)):
-    if b2[j] == "1":
-        Dec2 = Dec2 + sclr
-    sclr = sclr * 2
-    if b2[j] != "1" and b2[j] != "0":
-        print("Not a binary number, cannot continue!")
-        exit()
+Dec1 = convert(b1, sclr)
+Dec2 = convert(b2, sclr)
 
 Dec3 = Dec1 + Dec2#add the two original decimal values into a 3rd value
-sclr =1
 slot = 0#a variable that takes care of how many slots needed in a list to make the binary value of Dec3
 while(sclr <= Dec3):
     sclr = sclr*2
@@ -58,7 +50,6 @@ for i in range(slot):
     
 b1.reverse()
 b2.reverse()
-print()
 Bin3 = ''#changes list into a string that can be printed out nicely
 for x in b3:#runs a loop through each element of b3 list
     Bin3 += ''+x#adds each element of b3 to Bin3 seperated by ''
