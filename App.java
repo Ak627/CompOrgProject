@@ -1,6 +1,6 @@
 //______________________________________________________________________________________________________________
 // Logic Gate Simulation: (OR, AND, and NOT)
-// Author: Sam Engelbert CS1040 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
 //______________________________________________________________________________________________________________
 
 import java.util.Arrays; 
