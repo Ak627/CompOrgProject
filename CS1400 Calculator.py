@@ -1,3 +1,7 @@
+#___________________________________________________________________
+# Six function calculator using Python
+# Author: Sam Eneglbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+#___________________________________________________________________
 # user input section
 name = input("What is your name? ") # asks for user's name  
 print(f"Hello there {name}!") # prints hello message to user 
