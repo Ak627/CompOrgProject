@@ -10,7 +10,7 @@ def convert(l,s):#Function to convert binary numbers to decimal
         s = s * 2#multiplies binary slot by 2
         if l[j] != "1" and l[j] != "0":#check if the binary number contains anything other than 1 or 0
             print("Not a binary number, cannot continue!")
-            exit()#if contains something other than 1 or 0 end the code
+            exit()#if contains something other than 1 or 0 ends the code
     return d
 
 #getting input
@@ -35,14 +35,14 @@ Dec1 = convert(b1, sclr)
 Dec2 = convert(b2, sclr)
 
 Dec3 = Dec1 + Dec2#add the two original decimal values into a 3rd value
-slot = 0#a variable that takes care of how many slots needed in a list to make the binary value of Dec3
+slot = 0#a variable that takes care of how many slots are needed in a list to make the binary value of Dec3
 while(sclr <= Dec3):
     sclr = sclr*2
     slot = slot +1
     
 sclr = sclr/2
 
-b3 = [None] * slot#creates a list that is the lenght of the slots we need, and contains arbitrary values(None)
+b3 = [None] * slot#creates a list that is the length of the slots we need, and contains arbitrary values(None)
 for i in range(slot):
     if  (Dec3 // sclr)%2 == 0:
         b3[i] = '0'
@@ -56,6 +56,6 @@ b1.reverse()
 b2.reverse()
 Bin3 = ''#changes list into a string that can be printed out nicely
 for x in b3:#runs a loop through each element of b3 list
-    Bin3 += ''+x#adds each element of b3 to Bin3 seperated by ''
+    Bin3 += ''+x#adds each element of b3 to Bin3 separated by ''
 
 print(Bin1, "+", Bin2, "=", Bin3)
