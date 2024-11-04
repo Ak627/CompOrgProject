@@ -25,8 +25,8 @@ private static int[] c = new int[a.length];
 
     private static void notGate() { // NOT Gate 
         System.out.println("NOT Gate for a[]:"); 
-        for (int index = 0; index < a.length; index++) { 
-            c[index] = not(a[index]); 
+        for (int i = 0; i < a.length; index++) { 
+            c[i] = not(a[i]); 
         }
         
         printResult(c); 
@@ -42,8 +42,8 @@ private static int[] c = new int[a.length];
 
     private static void andGate() { // AND Gate 
          System.out.println("AND Gate:"); 
-         for (int index = 0; index < a.length; index++) { 
-            c[index] = and(a[index], b[index]); 
+         for (int i = 0; i < a.length; i++) { 
+            c[index] = and(a[i], b[i]); 
         }
         
         printResult(c);
@@ -55,8 +55,8 @@ private static int[] c = new int[a.length];
 
     public static void orGate() { // OR Gate 
         System.out.println("OR Gate:");
-        for (int index = 0; index < a.length; index++) { 
-            c[index] = or(a[index], b[index]);
+        for (int i = 0; i < a.length; index++) { 
+            c[index] = or(a[i], b[i]);
         
         }
         
@@ -79,8 +79,8 @@ private static int[] c = new int[a.length];
         System.out.println("- - -"); 
         System.out.println("| a b | c |"); // inputs and outputs
         System.out.println("| - - | - |"); // table format
-        for (int index = 0; index < a.length; index++) { // signifies order that each table is printed in the output
-            System.out.println("|" + a[index] + "  " + b[index] + " | " + c[index] + " |"); 
+        for (int i = 0; i < a.length; i++) { // signifies order that each table is printed in the output
+            System.out.println("|" + a[i] + "  " + b[i] + " | " + c[i] + " |"); 
         }
         System.out.println("- -  -"); // prints a header for all three gate ouputs
 
