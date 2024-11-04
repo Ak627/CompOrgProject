@@ -1,3 +1,7 @@
+//________________________________________________________________
+// Traffic Light Simulator wusing Sequential Logic 
+// Author: Dawson Ash CS1400 Team 5 (Alex, sam, Dawson, and Brian
+//________________________________________________________________
 import java.util.Map;
 import java.util.HashMap;
 import java.util.Timer;
