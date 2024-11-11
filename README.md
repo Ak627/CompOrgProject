@@ -8,6 +8,6 @@ INFO:
 3. Traffic Light Simulator (Dawson)
 4. Flash Card Game (Alexander)
 5. Logic Gate Simulator Pt I (Sam)
-6. Logic Gate SImulator Pt 2 (Sam)
+6. Logic Gate Simulator Pt 2 (Sam)
 7. Logic Gate Simulator Pt 3 (Sam)
 8. Memory Game with Color Cards (Brian)
