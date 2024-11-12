@@ -1,4 +1,4 @@
-Hi! We are Computer Organization I Team 5 (Alexander, Sam, Dawson, and Brian). This is our shared group repository for each program (corresponding to each project idea). 
+Hi! We are Computer Organization I Team 5 (Alexander, Sam, Dawson). This is our shared group repository for each program (corresponding to each project idea). 
 
 INFO: 
 
@@ -10,4 +10,4 @@ INFO:
 5. Logic Gate Simulator Pt I (Sam)
 6. Logic Gate Simulator Pt 2 (Sam)
 7. Logic Gate Simulator Pt 3 (Sam)
-8. Memory Game with Color Cards (Brian)
+8. Memory Game with Color Cards (in progress)
