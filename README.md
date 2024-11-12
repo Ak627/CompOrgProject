@@ -1,4 +1,4 @@
-Hi! We are Computer Organization I Team 5 (Alexander, Sam, Dawson). This is our shared group repository for each program (corresponding to each project idea). 
+Hi! We are Computer Organization I Team 5 (Alexander, Sam, Dawson, and Brian). This is our shared group repository for each program (corresponding to each project idea). 
 
 INFO: 
 
