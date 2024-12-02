@@ -1,0 +1,25 @@
+
+/*card format*/
+.card-container { 
+    height: 90px; 
+    width: 90px; 
+    margin: 10px; 
+    box-shadow: -- 6px brown; 
+    float: left; 
+} 
+
+.match-found {
+    box-shadow: 0 0 10px greenyellow; 
+} 
+.container { 
+    width: 100%
+} 
+img { 
+    max-width: 100%; 
+} 
+.centered { 
+    display: table; 
+    margin: 0 auto;
+
+
+} 
