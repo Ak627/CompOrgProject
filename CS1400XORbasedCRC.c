@@ -1,6 +1,6 @@
 //___________________________________________________________________
 // 32-bit CRC calculation XOR based logic (CPU function)
-// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson)
 //___________________________________________________________________
 
 // XOR Logic Refresh:
