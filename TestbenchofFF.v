@@ -1,6 +1,6 @@
 //____________________________________________________________________
 // Visual Testbench code for FF's
-// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson)
 //____________________________________________________________________
 `timescale 1ns/1ps
 module tb_DFF(); 
