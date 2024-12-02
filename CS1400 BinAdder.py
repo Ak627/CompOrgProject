@@ -1,7 +1,7 @@
 #_____________________________________________________________________________
 # Binary Adder
-# Author: Alexander Kindall: CS 1400, Team 5(Alex, Sam, Dawson, Brian)
-#-----------------------------------------------------------------------------
+# Author: Alexander Kindall: CS 1400, Team 5(Alex, Sam, Dawson)
+#_____________________________________________________________________________
 def convert(l,s):#Function to convert binary numbers to decimal
     d = 0
     for j in range(len(l)):
