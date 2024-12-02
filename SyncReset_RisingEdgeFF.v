@@ -1,6 +1,6 @@
 //______________________________________________________________________
 // Rising Edge DFLipFLop Sync Reset code 
-// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson)
 //______________________________________________________________________
 module RisingEdge DFlipFlop_SyncReset(D,clk,sync_reset,Q); 
 input D; 
