@@ -1,6 +1,6 @@
 #_______________________________________________________________________
 # Flash Card Quiz in Python
-# Author: Alexander Kindall CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+# Author: Alexander Kindall CS1400 Team 5 (Alex, Sam, Dawson)
 #_______________________________________________________________________
 import pygame
 import random
