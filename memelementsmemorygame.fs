@@ -1,3 +1,7 @@
+//____________________________________________________________________________________
+// Memory Game for Componenets 
+// Author: Sam Engelbert Team 5 CS1400 (Alex, Sam, and Dawson)
+//____________________________________________________________________________________
 #r "node_modules/memelements-core/Memelements.Core.d11"
 #r "node_modules/memelements-arch/Memelements.Arch.d11" 
 
