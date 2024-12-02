@@ -4,6 +4,7 @@
 #_______________________________________________________________________
 import pygame
 import random
+import time
 pygame.init()
 window = pygame.display.set_mode((800, 600))
 
@@ -20,8 +21,6 @@ def blit_text(surface, text, pos, font, rectangle):
             if x + word_width >= max_width + 200:
                 x = pos[0]  # Reset the x.
                 y += word_height  # Start on new row.
-
-            
             surface.blit(word_surface, (x, y))
             x += word_width + space
         x = pos[0]  # Reset the x.
@@ -30,30 +29,16 @@ def blit_text(surface, text, pos, font, rectangle):
 
 
 
-def quiz(quesNum, ans):
-    Question = ""
-    if quesNum == 1:
-        Question = "Question or something"
-
-QuesAns ={#Dictionary containing lists that will hold the answer to the question as well as 3 wrong answers that can be shown on the screen
-    1 : ["Answer","Wrong1","Wrong2","Wrong3"],
-    2 : ["Answer","Wrong1","Wrong2","Wrong3"],
-    3 : ["Answer","Wrong1","Wrong2","Wrong3"],
-    4 : ["Answer","Wrong1","Wrong2","Wrong3"],
-    5 : ["Answer","Wrong1","Wrong2","Wrong3"]
-}
 
 #rectangles and variables
 NRect = pygame.Rect(697, 531, 0,0).inflate(100,50)
 BRect = pygame.Rect(85, 531, 0,0).inflate(100,50)
 rect1 = pygame.Rect(*window.get_rect().center, 0, 0).inflate(350, 200)
+RedRect = pygame.Rect(window.get_rect().width/2, window.get_rect().height/2+250, 0,0).inflate(120, 50)
 run = True
 clock = pygame.time.Clock()
-state = (random.randrange(1,5))
-BigState = 0
+state = (random.randrange(0,6)+1)
 
-#list of components
-comps = []
 
 while run:
     clock.tick(60)
@@ -69,71 +54,71 @@ while run:
     headerFont = pygame.font.Font(None, 45)
     
     window.fill(100)#fills window with a specific color
-    if BigState == 0:#makes one big state that will be "review" before the quiz
-        collide = rect1.collidepoint(mousePos)#collision with main rectangle(flash card)
+    collide = rect1.collidepoint(mousePos)#collision with main rectangle(flash card)
 
-        #draws the next and back buttons using rect functions
-        #checks if the mouse is in the rectangles and if the user is clicking a mouse button
-        if NRect.collidepoint(mousePos) and event.type == pygame.MOUSEBUTTONDOWN:
-            state += 1#increments state by 1
-            if state > 6:#if greater than a certain value revert to first state
-                state = 1
-        if BRect.collidepoint(mousePos) and event.type == pygame.MOUSEBUTTONDOWN:
-            state -=1#decrements state by 1
-            if state < 1:#if less than a certain value revert to last state
-                state = 6
-        back = headerFont.render(str("BACK"),1,(0,0,0))
-        next = headerFont.render(str("NEXT"),1,(0,0,0))
-        pygame.draw.rect(window, (255,255,255), NRect)
-        pygame.draw.rect(window, (255,255,255), BRect)
-        window.blit(back,(BRect))
-        window.blit(next, (NRect))
-        color = (150, 100, 150) if collide else (200, 255, 200)
+    #draws the next and back buttons using rect functions
+    #checks if the mouse is in the rectangles and if the user is clicking a mouse button
+    if NRect.collidepoint(mousePos) and event.type == pygame.MOUSEBUTTONDOWN:
+        state += 1#increments state by 1
+        if state > 6:#if greater than a certain value revert to first state
+            state = 1
+    if BRect.collidepoint(mousePos) and event.type == pygame.MOUSEBUTTONDOWN:
+        state -=1#decrements state by 1
+        if state < 1:#if less than a certain value revert to last state
+            state = 6
+    back = headerFont.render(str("BACK"),1,(0,0,0))
+    next = headerFont.render(str("NEXT"),1,(0,0,0))
+    ready = headerFont.render(str("READY"),1,(0,0,0))
+    pygame.draw.rect(window, (255,255,255), NRect)
+    pygame.draw.rect(window, (255,255,255), BRect)
+    window.blit(back,(BRect))
+    window.blit(next, (NRect))
+    color = (150, 100, 150) if collide else (200, 255, 200)
 
-        header = headerFont.render(str("Hover on card to see answer!"),1,(0,0,0))
-        cardNum = headerFont.render(str(state),1,(0,0,0))
-        Title = headerFont.render(str("Flash Card Quiz!(CPU COMPOPNENTS)"),1,(0,0,0))
-        window.blit(Title, (0,0))
-        window.blit(header,(200,153))
-        window.blit(cardNum,(380,420))
-        if state == 1:#if state is a certain value, different things will show on the screen
-            text = ("ALU(Arithmetic Logic Unit)") if collide else ("Processes data and instructions from the memory unit, and stores the results in primary memory")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
-            
-        if state == 2:
-            text = ("CU(Control Unit)") if collide else ("Collects data from the input unit, processes it, and presents the output to the user")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
-            
-        if state == 3:
-            text = ("IR(Instruction Register)") if collide else ("Holds each instruction after it is fetched from memory")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
-            
-        if state == 4:
-            text = ("Cache") if collide else ("An essential component of CPU architecture that helps bridge the gap between processing power and main memory access latency")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+    header = headerFont.render(str("Hover on card to see answer!"),1,(0,0,0))
+    cardNum = headerFont.render(str(state),1,(0,0,0))
+    Title = headerFont.render(str("Flash Card Quiz!(CPU COMPOPNENTS)"),1,(0,0,0))
+    window.blit(Title, (0,0))
+    window.blit(header,(200,153))
+    window.blit(cardNum,(380,420))
+    if state == 1:#if state is a certain value, different things will show on the screen
+        text = ("ALU(Arithmetic Logic Unit)") if collide else ("Processes data and instructions from the memory unit, and stores the results in primary memory")
         
-        if state == 5:
-            text = ("Register") if collide else ("One of a small set of data holding places that are part of the computer processor")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+        
+    if state == 2:
+        text = ("CU(Control Unit)") if collide else ("Collects data from the input unit, processes it, and presents the output to the user")
+        
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+        
+    if state == 3:
+        text = ("IR(Instruction Register)") if collide else ("Holds each instruction after it is fetched from memory")
+        
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+        
+    if state == 4:
+        text = ("Cache") if collide else ("An essential component of CPU architecture that helps bridge the gap between processing power and main memory access latency")
+        
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+    
+    if state == 5:
+        text = ("Register") if collide else ("One of a small set of data holding places that are part of the computer processor")
+        
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
 
-        if state == 6:
-            text = ("Buses") if collide else ("A collection of signal lines that enable the flow of electrical impulses between components of the computer")
-            
-            pygame.draw.rect(window, color, rect1)
-            blit_text(window, text, (rect1.x, rect1.y), font, rect1)
-
-    if BigState == 1:#big state that holds the quiz
-        pygame.draw.rect(window, (255,0,255), (0,0,100,100))
+    if state == 6:
+        text = ("Buses") if collide else ("A collection of signal lines that enable the flow of electrical impulses between components of the computer")
+        
+        pygame.draw.rect(window, color, rect1)
+        blit_text(window, text, (rect1.x, rect1.y), font, rect1)
+        
+    
+        
         
     pygame.display.flip()#allows everything to be drawn on screen
 pygame.quit()
