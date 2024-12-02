@@ -1,6 +1,6 @@
 //________________________________________________________________
 // Traffic Light Simulator wusing Sequential Logic 
-// Author: Dawson Ash CS1400 Team 5 (Alex, Sam, Dawson, and Brian
+// Author: Dawson Ash CS1400 Team 5 (Alex, Sam, Dawson)
 //________________________________________________________________
 import java.util.Map;
 import java.util.HashMap;
