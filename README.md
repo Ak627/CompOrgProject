@@ -12,4 +12,4 @@ INFO:
 5. Logic Gate Simulator Pt I (Sam)
 6. Logic Gate Simulator Pt 2 (Sam)
 7. Logic Gate Simulator Pt 3 (Sam)
-8. Memory Game with Color Cards (in progress)
+8. Memory Game with Color Cards (Sam)
