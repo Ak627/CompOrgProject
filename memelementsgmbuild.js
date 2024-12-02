@@ -1,3 +1,7 @@
+//__________________________________________________________
+// Build for Memory Game with external compilation
+// Author: Sam Engelbert Team 5 CS1400 (ALex, Sam, Dawson)
+//__________________________________________________________
 const path = require('path'); 
 const fs = require('fs-path'); 
 const memelements = require('memelements-compiler'); 
