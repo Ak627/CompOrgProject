@@ -1,6 +1,6 @@
 //___________________________________________________________________
 // Rising Edge FF code 
-// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson)
 //___________________________________________________________________
 module RisingEdge_DFlipFlop (D,clk,Q); 
 input D; // data
