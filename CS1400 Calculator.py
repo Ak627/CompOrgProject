@@ -1,6 +1,6 @@
 #___________________________________________________________________
 # Six function calculator using Python
-# Author: Sam Eneglbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+# Author: Sam Eneglbert CS1400 Team 5 (Alex, Sam, Dawson)
 #___________________________________________________________________
 # user input section
 name = input("What is your name? ") # asks for user's name  
