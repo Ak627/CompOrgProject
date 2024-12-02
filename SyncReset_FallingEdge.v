@@ -1,6 +1,6 @@
 //___________________________________________________________________
 // Falling Edge DFlipFlop Sync Reset code
-// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson, and Brian)
+// Author: Sam Engelbert CS1400 Team 5 (Alex, Sam, Dawson)
 //___________________________________________________________________ 
 module FallingEdge_DFlipFlop_SyncReset(D,clk,sync_reset,Q); 
 input D; 
